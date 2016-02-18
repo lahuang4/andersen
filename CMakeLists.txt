@@ -26,4 +26,7 @@ add_subdirectory (lib)
 add_subdirectory (unittest)
 
 enable_testing ()
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
+
 add_test (AndersTest ${PROJECT_BINARY_DIR}/unittest/AndersTest)
